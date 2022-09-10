@@ -11,7 +11,7 @@ public class CatTests
         DomesticCat domesticCat = new();
         domesticCat.IsAsleep.Should().Be(false);
     }
-
+    
     [Test]
     public void DomesticCat_Should_Be_Asleep_When_GoToSleep_Is_Called()
     {
@@ -28,14 +28,14 @@ public class CatTests
         domesticCat.WakeUp();
         domesticCat.IsAsleep.Should().Be(false);
     }
-
+    
     [Test]
     public void DomesticCat_Setting_Should_Be_Domestic()
     {
         DomesticCat domesticCat = new();
         domesticCat.Setting.Should().Be("domestic");
     }
-
+    
     [Test]
     public void DomesticCat_AverageHeight_Should_Be_Correct()
     {
@@ -56,18 +56,18 @@ public class CatTests
         LionCat lionCat = new();
         lionCat.Eat().Should().Be("Roar!!!!");
     }
-
+    
     [Test]
     public void CheetahCat_Should_Make_A_Sound_When_Eat_Is_Called()
     {
         CheetahCat cheetahCat = new();
         cheetahCat.Eat().Should().Be("Zzzzzzz");
     }
-
+    
     [Test]
-    public void DomesticCat_Should_Make_A_Sound_When_Eat_Is_Called()
+    public void DomesticCat_Should_Make_A_Sound_When_Eat_Is_Called() // may randomly comment on food too
     {
         DomesticCat domesticCat = new();
-        domesticCat.Eat().Should().Be("Purrrrrrr");
+        domesticCat.Eat().Should().BeOneOf("Purrrrrrr","Purrrrrrr.  It will do I suppose.");       
     }
 }
